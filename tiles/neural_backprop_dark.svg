@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Neural network backpropagation tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.6" stop-color="#0E1430"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00D1FF" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#00D1FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#00D1FF" stop-opacity="0.10"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L6,3 z" fill="#FF4D8D" fill-opacity="0.9"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <!-- Forward connections -->
+  <g stroke="url(#edge)" stroke-width="6" fill="none" opacity="0.9">
+    <path d="M260 300 C430 260, 470 260, 600 300"/>
+    <path d="M260 600 C430 560, 470 560, 600 600"/>
+    <path d="M260 900 C430 860, 470 860, 600 900"/>
+
+    <path d="M260 300 C430 430, 470 470, 600 600" opacity="0.55"/>
+    <path d="M260 900 C430 770, 470 730, 600 600" opacity="0.55"/>
+
+    <path d="M600 300 C740 260, 800 260, 940 300"/>
+    <path d="M600 600 C740 560, 800 560, 940 600"/>
+    <path d="M600 900 C740 860, 800 860, 940 900"/>
+
+    <path d="M600 300 C740 430, 800 470, 940 600" opacity="0.55"/>
+    <path d="M600 900 C740 770, 800 730, 940 600" opacity="0.55"/>
+  </g>
+
+  <!-- Backprop arrows (right to left) -->
+  <g stroke="#FF4D8D" stroke-width="6" fill="none" opacity="0.9" marker-end="url(#arrow)" filter="url(#glow)">
+    <path d="M900 320 C780 360, 720 380, 620 430"/>
+    <path d="M900 620 C780 660, 720 680, 620 730"/>
+    <path d="M900 920 C780 960, 720 980, 620 1030" opacity="0.0"/>
+    <path d="M900 600 C790 585, 720 585, 620 600"/>
+    <path d="M900 580 C790 540, 720 520, 620 470"/>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#glow)">
+    <!-- Input layer -->
+    <circle cx="260" cy="300" r="30" fill="#6CFFB7" fill-opacity="0.9"/>
+    <circle cx="260" cy="600" r="30" fill="#6CFFB7" fill-opacity="0.9"/>
+    <circle cx="260" cy="900" r="30" fill="#6CFFB7" fill-opacity="0.9"/>
+
+    <!-- Hidden layer -->
+    <circle cx="600" cy="300" r="34" fill="#00D1FF" fill-opacity="0.95"/>
+    <circle cx="600" cy="600" r="34" fill="#00D1FF" fill-opacity="0.95"/>
+    <circle cx="600" cy="900" r="34" fill="#00D1FF" fill-opacity="0.95"/>
+
+    <!-- Output layer -->
+    <circle cx="940" cy="300" r="30" fill="#FFD166" fill-opacity="0.95"/>
+    <circle cx="940" cy="600" r="30" fill="#FFD166" fill-opacity="0.95"/>
+    <circle cx="940" cy="900" r="30" fill="#FFD166" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Subtle caption-like bars (no text) -->
+  <rect x="120" y="1040" width="960" height="10" fill="#00D1FF" opacity="0.12"/>
+  <rect x="120" y="1070" width="720" height="10" fill="#FF4D8D" opacity="0.12"/>
+</svg>

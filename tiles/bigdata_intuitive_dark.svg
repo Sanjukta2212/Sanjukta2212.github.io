@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Intuitive big data tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.6" stop-color="#0B1633"/>
+      <stop offset="1" stop-color="#04050B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="pipe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00D1FF" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#00D1FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00D1FF" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6CFFB7" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#6CFFB7" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <!-- Source files -->
+  <g filter="url(#glow)">
+    <rect x="150" y="290" width="220" height="150" rx="18" fill="#FFD166" opacity="0.12" stroke="#FFD166" stroke-opacity="0.35" stroke-width="4"/>
+    <rect x="150" y="500" width="220" height="150" rx="18" fill="#FFD166" opacity="0.10" stroke="#FFD166" stroke-opacity="0.30" stroke-width="4"/>
+    <rect x="150" y="710" width="220" height="150" rx="18" fill="#FFD166" opacity="0.08" stroke="#FFD166" stroke-opacity="0.25" stroke-width="4"/>
+
+    <!-- Pipeline -->
+    <path d="M390 365 H520 C570 365, 585 380, 610 430 C645 500, 700 540, 780 560 H1010"
+          stroke="url(#pipe)" stroke-width="16" fill="none" opacity="0.8"/>
+    <path d="M390 575 H520 C570 575, 585 560, 610 510 C645 440, 700 400, 780 380 H1010"
+          stroke="url(#pipe)" stroke-width="16" fill="none" opacity="0.6"/>
+
+    <!-- Spark/batch nodes -->
+    <circle cx="620" cy="470" r="28" fill="#FF4D8D" opacity="0.22" stroke="#FF4D8D" stroke-opacity="0.55" stroke-width="6"/>
+    <circle cx="740" cy="410" r="20" fill="#FF4D8D" opacity="0.18" stroke="#FF4D8D" stroke-opacity="0.45" stroke-width="6"/>
+    <circle cx="740" cy="530" r="20" fill="#FF4D8D" opacity="0.18" stroke="#FF4D8D" stroke-opacity="0.45" stroke-width="6"/>
+
+    <!-- Destination dashboard -->
+    <rect x="880" y="360" width="190" height="360" rx="22" fill="url(#card)" stroke="#6CFFB7" stroke-opacity="0.35" stroke-width="4"/>
+    <rect x="905" y="395" width="140" height="20" rx="10" fill="#6CFFB7" opacity="0.35"/>
+    <rect x="905" y="440" width="160" height="16" rx="8" fill="#6CFFB7" opacity="0.22"/>
+    <rect x="905" y="472" width="120" height="16" rx="8" fill="#6CFFB7" opacity="0.20"/>
+    <rect x="905" y="510" width="150" height="110" rx="14" fill="#00D1FF" opacity="0.10"/>
+  </g>
+</svg>

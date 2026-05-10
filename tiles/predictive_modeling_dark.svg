@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Predictive modeling tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0C1736"/>
+      <stop offset="1" stop-color="#04050B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6CFFB7" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#6CFFB7" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#6CFFB7" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <!-- Chart frame -->
+  <g opacity="0.35">
+    <rect x="170" y="220" width="860" height="760" fill="none" stroke="#9AD7FF" stroke-width="4"/>
+    <path d="M170 860 H1030" stroke="#9AD7FF" stroke-width="4"/>
+    <path d="M300 220 V980" stroke="#9AD7FF" stroke-width="4" opacity="0.55"/>
+    <path d="M170 340 H1030" stroke="#9AD7FF" stroke-width="2" opacity="0.25"/>
+    <path d="M170 460 H1030" stroke="#9AD7FF" stroke-width="2" opacity="0.20"/>
+    <path d="M170 580 H1030" stroke="#9AD7FF" stroke-width="2" opacity="0.18"/>
+    <path d="M170 700 H1030" stroke="#9AD7FF" stroke-width="2" opacity="0.16"/>
+  </g>
+
+  <!-- Scatter points -->
+  <g filter="url(#glow)">
+    <circle cx="310" cy="760" r="10" fill="#00D1FF" opacity="0.9"/>
+    <circle cx="370" cy="720" r="8" fill="#00D1FF" opacity="0.8"/>
+    <circle cx="430" cy="690" r="9" fill="#00D1FF" opacity="0.85"/>
+    <circle cx="520" cy="640" r="8" fill="#00D1FF" opacity="0.8"/>
+    <circle cx="610" cy="600" r="10" fill="#00D1FF" opacity="0.9"/>
+    <circle cx="700" cy="560" r="8" fill="#00D1FF" opacity="0.8"/>
+    <circle cx="790" cy="520" r="9" fill="#00D1FF" opacity="0.85"/>
+    <circle cx="900" cy="470" r="10" fill="#00D1FF" opacity="0.9"/>
+  </g>
+
+  <!-- Predictive curve -->
+  <path d="M260 820 C360 760, 450 720, 560 650 C680 575, 790 540, 940 440"
+        fill="none" stroke="url(#line)" stroke-width="12" filter="url(#glow)"/>
+
+  <!-- Forecast band -->
+  <path d="M560 650 C680 575, 790 540, 940 440 L940 520 C800 600, 690 630, 560 720 Z"
+        fill="#6CFFB7" opacity="0.12"/>
+
+  <!-- Small model blocks -->
+  <g opacity="0.85" filter="url(#glow)">
+    <rect x="210" y="260" width="160" height="70" rx="12" fill="#FF4D8D" opacity="0.22"/>
+    <rect x="390" y="260" width="160" height="70" rx="12" fill="#FFD166" opacity="0.18"/>
+    <rect x="570" y="260" width="160" height="70" rx="12" fill="#00D1FF" opacity="0.18"/>
+  </g>
+</svg>

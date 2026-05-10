@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Azure cloud tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.6" stop-color="#0B1633"/>
+      <stop offset="1" stop-color="#04050B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="cloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00D1FF" stop-opacity="0.24"/>
+      <stop offset="0.6" stop-color="#00A3FF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0066FF" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00A3FF"/>
+      <stop offset="0.55" stop-color="#39D1FF"/>
+      <stop offset="1" stop-color="#0066FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <!-- Big cloud -->
+  <g filter="url(#glow)">
+    <path d="M360 760
+             C280 760, 220 700, 220 625
+             C220 560, 270 505, 335 495
+             C365 420, 440 370, 530 370
+             C610 370, 680 410, 720 470
+             C740 460, 765 455, 790 455
+             C870 455, 935 520, 935 600
+             C1000 620, 1045 675, 1045 740
+             C1045 825, 975 895, 890 895
+             L360 895
+             C295 895, 240 840, 240 775
+             C240 710, 295 760, 360 760 Z"
+          fill="url(#cloud)"/>
+
+    <!-- Azure mark inside cloud -->
+    <path d="M610 475 L470 820 L560 820 L604 720 L690 935 L815 935 L670 475 Z"
+          fill="url(#mark)" opacity="0.95"/>
+    <path d="M610 475 L670 475 L815 935 L730 935 Z"
+          fill="#39D1FF" opacity="0.82"/>
+  </g>
+
+  <!-- Subtle stars -->
+  <g fill="#9AD7FF" opacity="0.10">
+    <circle cx="210" cy="180" r="4"/>
+    <circle cx="310" cy="140" r="3"/>
+    <circle cx="980" cy="210" r="4"/>
+    <circle cx="870" cy="160" r="3"/>
+    <circle cx="760" cy="120" r="2.5"/>
+  </g>
+</svg>

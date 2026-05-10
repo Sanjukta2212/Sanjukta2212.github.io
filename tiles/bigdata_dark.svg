@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Big data tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060712"/>
+      <stop offset="0.55" stop-color="#0B1230"/>
+      <stop offset="1" stop-color="#04050B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00D1FF" stop-opacity="0.0"/>
+      <stop offset="0.5" stop-color="#00D1FF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#00D1FF" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#9AD7FF" opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect width="1200" height="1200" fill="url(#dots)"/>
+  <path d="M-200 260 L1240 1060" stroke="url(#accent)" stroke-width="240" opacity="0.55"/>
+
+  <!-- Data lake / database stack -->
+  <g filter="url(#glow)" transform="translate(0,10)">
+    <ellipse cx="600" cy="360" rx="330" ry="90" fill="#00D1FF" opacity="0.22"/>
+    <rect x="270" y="360" width="660" height="380" fill="#00D1FF" opacity="0.14"/>
+    <ellipse cx="600" cy="740" rx="330" ry="90" fill="#00D1FF" opacity="0.22"/>
+
+    <ellipse cx="600" cy="470" rx="330" ry="90" fill="#6CFFB7" opacity="0.10"/>
+    <ellipse cx="600" cy="585" rx="330" ry="90" fill="#6CFFB7" opacity="0.08"/>
+    <ellipse cx="600" cy="700" rx="330" ry="90" fill="#6CFFB7" opacity="0.06"/>
+  </g>
+
+  <!-- Spark-like streaming points -->
+  <g filter="url(#glow)">
+    <circle cx="210" cy="860" r="10" fill="#FF4D8D" opacity="0.85"/>
+    <circle cx="270" cy="820" r="7" fill="#FF4D8D" opacity="0.75"/>
+    <circle cx="340" cy="790" r="6" fill="#FF4D8D" opacity="0.65"/>
+    <circle cx="420" cy="760" r="5" fill="#FF4D8D" opacity="0.55"/>
+
+    <circle cx="990" cy="370" r="9" fill="#FFD166" opacity="0.85"/>
+    <circle cx="930" cy="330" r="6" fill="#FFD166" opacity="0.70"/>
+    <circle cx="860" cy="300" r="5" fill="#FFD166" opacity="0.60"/>
+  </g>
+</svg>

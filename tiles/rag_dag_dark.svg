@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="RAG DAG architecture tile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.6" stop-color="#0B1633"/>
+      <stop offset="1" stop-color="#04050B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6.5" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#00D1FF" fill-opacity="0.9"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+
+  <!-- DAG edges -->
+  <g stroke="#00D1FF" stroke-width="8" fill="none" opacity="0.35" marker-end="url(#arrow)">
+    <path d="M220 280 C320 280, 340 280, 440 280"/>
+    <path d="M440 280 C540 280, 560 280, 660 280"/>
+    <path d="M660 280 C760 280, 780 280, 980 280"/>
+
+    <path d="M440 280 C520 420, 580 480, 660 520"/>
+    <path d="M440 280 C520 620, 580 720, 660 760"/>
+
+    <path d="M660 520 C760 520, 780 520, 980 520"/>
+    <path d="M660 760 C760 760, 780 760, 980 760"/>
+
+    <!-- merge to final answer -->
+    <path d="M980 520 C1040 600, 1040 600, 980 680"/>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#glow)">
+    <!-- User -->
+    <rect x="140" y="220" width="160" height="120" rx="18" fill="#6CFFB7" opacity="0.18" stroke="#6CFFB7" stroke-opacity="0.55" stroke-width="4"/>
+    <circle cx="220" cy="280" r="18" fill="#6CFFB7" opacity="0.9"/>
+
+    <!-- Retriever -->
+    <rect x="360" y="220" width="160" height="120" rx="18" fill="#FFD166" opacity="0.14" stroke="#FFD166" stroke-opacity="0.45" stroke-width="4"/>
+    <circle cx="440" cy="280" r="18" fill="#FFD166" opacity="0.9"/>
+
+    <!-- Chunking / Embed -->
+    <rect x="580" y="220" width="160" height="120" rx="18" fill="#00D1FF" opacity="0.14" stroke="#00D1FF" stroke-opacity="0.45" stroke-width="4"/>
+    <circle cx="660" cy="280" r="18" fill="#00D1FF" opacity="0.9"/>
+
+    <!-- LLM -->
+    <rect x="900" y="220" width="160" height="120" rx="18" fill="#FF4D8D" opacity="0.14" stroke="#FF4D8D" stroke-opacity="0.45" stroke-width="4"/>
+    <circle cx="980" cy="280" r="18" fill="#FF4D8D" opacity="0.9"/>
+
+    <!-- Vector DB -->
+    <rect x="580" y="460" width="160" height="120" rx="18" fill="#00D1FF" opacity="0.10" stroke="#00D1FF" stroke-opacity="0.35" stroke-width="4"/>
+    <circle cx="660" cy="520" r="18" fill="#00D1FF" opacity="0.75"/>
+
+    <!-- Policy data -->
+    <rect x="580" y="700" width="160" height="120" rx="18" fill="#00D1FF" opacity="0.08" stroke="#00D1FF" stroke-opacity="0.3" stroke-width="4"/>
+    <circle cx="660" cy="760" r="18" fill="#00D1FF" opacity="0.65"/>
+
+    <!-- Context to LLM -->
+    <rect x="900" y="460" width="160" height="120" rx="18" fill="#FFD166" opacity="0.12" stroke="#FFD166" stroke-opacity="0.35" stroke-width="4"/>
+    <circle cx="980" cy="520" r="18" fill="#FFD166" opacity="0.85"/>
+
+    <rect x="900" y="700" width="160" height="120" rx="18" fill="#FFD166" opacity="0.10" stroke="#FFD166" stroke-opacity="0.3" stroke-width="4"/>
+    <circle cx="980" cy="760" r="18" fill="#FFD166" opacity="0.75"/>
+  </g>
+
+  <!-- Subtle header bar -->
+  <rect x="140" y="950" width="920" height="10" fill="#00D1FF" opacity="0.10"/>
+</svg>
